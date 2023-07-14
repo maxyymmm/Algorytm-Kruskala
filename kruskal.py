@@ -2,7 +2,7 @@
 def make_set(v):
     return {v}
 
-# łączy 2 zbiory rozłacznee
+# łączy 2 zbiory rozłączne
 def union(u, v):
     set_u, set_v = find_set(u), find_set(v)
     if set_u != set_v:
@@ -15,7 +15,7 @@ def find_set(v):
         if v in s:
             return s
        
-# do sortowania niemalejąco - daje
+# do sortowania niemalejącego
 def get_weight(e):
     return W[E.index(e)][1]
 
@@ -26,7 +26,7 @@ if __name__ == "__main__":
     W = [[['A', 'B'], 7], [['B', 'C'], 8], [['C', 'E'], 5], [['E', 'G'], 9], [['G', 'F'], 11], [['F', 'D'], 6], [['D', 'A'], 5], [['D', 'B'], 9], [['B', 'E'], 7], [['D', 'E'], 15], [['F', 'E'], 8]]#Wagi
 
 
-    # tworzenie zbioru z ppojedynczymi elementami
+    # tworzenie zbioru z pojedynczymi elementami
     sets = [make_set(v) for v in V]
 
     # sortowanie krawędzi niemalejąco
